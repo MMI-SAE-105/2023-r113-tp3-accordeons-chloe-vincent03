@@ -12,18 +12,18 @@
     <div class="accordeon">
       <section x-data="{estOuvert:false,
       }">
-        <button>bouton 1</button>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aliquid ipsum accusantium molestias facilis quisquam placeat perspiciatis ea, sit quia qui natus nobis dolor quas numquam fuga est, temporibus eligendi.</p>
+        <button @click="estOuvert= !estOuvert">bouton 1</button>
+        <p x-show="estOuvert">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aliquid ipsum accusantium molestias facilis quisquam placeat perspiciatis ea, sit quia qui natus nobis dolor quas numquam fuga est, temporibus eligendi.</p>
       </section>
       <section x-data="{estOuvert:false,
       }">
-        <button>bouton 2</button>
-        <p>Eligendi, veritatis! Atque ex praesentium, dolores obcaecati minima reprehenderit soluta sequi odio culpa incidunt libero hic ea harum, fugit nulla esse, aspernatur corporis numquam iste quibusdam cupiditate. Iure, eum autem?</p>
+        <button @click="estOuvert= !estOuvert">bouton 2</button>
+        <p x-show="estOuvert">Eligendi, veritatis! Atque ex praesentium, dolores obcaecati minima reprehenderit soluta sequi odio culpa incidunt libero hic ea harum, fugit nulla esse, aspernatur corporis numquam iste quibusdam cupiditate. Iure, eum autem?</p>
       </section>
       <section x-data="{estOuvert:false,
       }">
-        <button>bouton 3</button>
-        <p>At maxime harum laboriosam tempora, alias debitis, cupiditate veritatis non fugiat perspiciatis, voluptatum dolorem rem sequi consectetur porro. Soluta provident nobis ducimus minima, numquam dolorem asperiores cupiditate! Maxime, debitis corporis!</p>
+        <button @click="estOuvert= !estOuvert">bouton 3</button>
+        <p x-show="estOuvert">At maxime harum laboriosam tempora, alias debitis, cupiditate veritatis non fugiat perspiciatis, voluptatum dolorem rem sequi consectetur porro. Soluta provident nobis ducimus minima, numquam dolorem asperiores cupiditate! Maxime, debitis corporis!</p>
       </section>
     </div>
   </body>
