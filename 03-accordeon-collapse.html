@@ -7,6 +7,16 @@
     <title>Accordéon avec x-collapse</title>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+      .ouvert{
+        background-color: #1AA5F5;
+        border: 10px ;
+        color: white;
+        padding: 7px 10px;
+        font-size: 13px;
+        border-radius: 10px ;
+      }
+    </style>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
@@ -14,15 +24,15 @@
       estOuvert: 1
     }">
       <section>
-        <button @click="estOuvert= 1">bouton 1</button>
+        <button @click="estOuvert= 1" :class="{ouvert:estOuvert ===1}">bouton 1 </button>
         <p x-show="estOuvert ===1 " x-collapse>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat, nobis saepe error vitae hic consectetur in ducimus facere odit minima dignissimos aut voluptatibus, voluptate corrupti harum nisi eveniet! Est!</p>
       </section>
       <section>
-        <button @click="estOuvert= 2">bouton 2</button>
+        <button @click="estOuvert= 2" :class="{ouvert:estOuvert ===2}">bouton 2</button>
         <p x-show="estOuvert ===2 " x-collapse>Reiciendis amet nihil rem velit fugit sed sequi a ea aliquam repellendus eos quibusdam quo, quas, explicabo optio pariatur officiis ipsum esse corporis corrupti eius laudantium ipsam totam tempora. Debitis?</p>
       </section>
       <section>
-        <button @click="estOuvert= 3">bouton 3</button>
+        <button @click="estOuvert= 3" :class="{ouvert:estOuvert ===3}">bouton 3</button>
         <p x-show="estOuvert ===3 " x-collapse>Molestias repellat fugit eius ratione velit hic sequi eos et, distinctio, laudantium sed nobis qui. Laudantium temporibus vero numquam voluptatem vel eveniet laborum tenetur similique, consequuntur repellendus, porro magnam dolores?</p>
       </section>
     </div>
