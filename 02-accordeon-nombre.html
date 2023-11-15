@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
@@ -12,16 +13,16 @@
       estOuvert: 1
     }">
       <section>
-        <button>bouton 1</button>
-        <p x-show="estOuvert===1" x-transition.duration.5ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat, nobis saepe error vitae hic consectetur in ducimus facere odit minima dignissimos aut voluptatibus, voluptate corrupti harum nisi eveniet! Est!</p>
+        <button @click="estOuvert=1">bouton 1</button>
+        <p x-show="estOuvert===1" x-transition.scale.0.origin.left.duration.1000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat, nobis saepe error vitae hic consectetur in ducimus facere odit minima dignissimos aut voluptatibus, voluptate corrupti harum nisi eveniet! Est!</p>
       </section>
       <section>
-        <button>bouton 2</button>
-        <p x-show="estOuvert===2" x-transition.duration.5ms>Reiciendis amet nihil rem velit fugit sed sequi a ea aliquam repellendus eos quibusdam quo, quas, explicabo optio pariatur officiis ipsum esse corporis corrupti eius laudantium ipsam totam tempora. Debitis?</p>
+        <button @click="estOuvert=2">bouton 2</button>
+        <p x-show="estOuvert===2" x-transition.scale.0.origin.left.duration.1000ms>Reiciendis amet nihil rem velit fugit sed sequi a ea aliquam repellendus eos quibusdam quo, quas, explicabo optio pariatur officiis ipsum esse corporis corrupti eius laudantium ipsam totam tempora. Debitis?</p>
       </section>
       <section>
-        <button>bouton 3</button>
-        <p x-show="estOuvert===3" x-transition.duration.5ms>Molestias repellat fugit eius ratione velit hic sequi eos et, distinctio, laudantium sed nobis qui. Laudantium temporibus vero numquam voluptatem vel eveniet laborum tenetur similique, consequuntur repellendus, porro magnam dolores?</p>
+        <button @click="estOuvert=3">bouton 3</button>
+        <p x-show="estOuvert===3" x-transition.scale.0.origin.left.duration.1000ms>Molestias repellat fugit eius ratione velit hic sequi eos et, distinctio, laudantium sed nobis qui. Laudantium temporibus vero numquam voluptatem vel eveniet laborum tenetur similique, consequuntur repellendus, porro magnam dolores?</p>
       </section>
     </div>
   </body>
