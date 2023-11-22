@@ -8,14 +8,14 @@
     <title>Accordéon horizontal</title>
     <style>
       #accordeon{
-     /* pour que les éléments soient alignés horizontalement */
-     /* pour éviter les marges par défaut */
-     /* pour éviter les "padding" par défaut */
+        display: flex; /* pour que les éléments soient alignés horizontalement */
+        margin: 0; /* pour éviter les marges par défaut */
+        padding: 0; /* pour éviter les "padding" par défaut */
       }
 
       #accordeon li {
-     /* largeur de chaque élément replié 107px */
-     /* pour cacher le contenu dépassant de l'élément */
+        width: 170px ; /* largeur de chaque élément replié 107px */
+        overflow-hidden;  /* pour cacher le contenu dépassant de l'élément */
      /* pour l'animation, transition sur width */
      /* couleur de fond #eee */
      /* pour enlever les puces */
