@@ -42,10 +42,14 @@
         padding: 10px; /* espace entre les éléments */
       }
 
-/* Sur tous les enfants de figcation */
+      /* Sur tous les enfants de figcation */
+      #figcaption > * {
+        margin: 0; /* pour éviter les marges par défaut */
+        padding: 0; /* pour éviter les "padding" par défaut */
+      }
       #accordeon li figure figcaption > * {
-     /* pour éviter les marges par défaut */
-     /* pour éviter les "padding" par défaut */
+        margin: 0;/* pour éviter les marges par défaut */
+        padding: 0;/* pour éviter les "padding" par défaut */
       }
     </style>
   </head>
