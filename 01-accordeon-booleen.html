@@ -6,27 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+      .actif {
+        background-color: #5e4caf; /* Green background */
+        cursor: pointer;
+        
+}
+      button {
+        padding: 10px 20px;
+        background-color: #4c60af; /* Green background */
+        border: none;
+        color: white; /* White text */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 600px;
+      }
+    </style>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
     <div class="accordeon">
       <section x-data="{estOuvert:false,
       }">
-        <button @click="estOuvert= !estOuvert">bouton 1
+        <button @click="estOuvert= !estOuvert"
+        x-bind:class="{actif: estOuvert===true}">bouton 1
         </button>
-        <p x-show="estOuvert" x-transition.duration.5ms>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aliquid ipsum accusantium molestias facilis quisquam placeat perspiciatis ea, sit quia qui natus nobis dolor quas numquam fuga est, temporibus eligendi.</p>
+        <p x-show="estOuvert" x-transition.duration.500ms>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aliquid ipsum accusantium molestias facilis quisquam placeat perspiciatis ea, sit quia qui natus nobis dolor quas numquam fuga est, temporibus eligendi.</p>
       </section>
       <section x-data="{estOuvert:false,
       }">
-        <button @click="estOuvert= !estOuvert">bouton 2
+        <button @click="estOuvert= !estOuvert" 
+        x-bind:class="{actif: estOuvert===true}">bouton 2
         </button>
-        <p x-show="estOuvert" x-transition.duration.5ms >Eligendi, veritatis! Atque ex praesentium, dolores obcaecati minima reprehenderit soluta sequi odio culpa incidunt libero hic ea harum, fugit nulla esse, aspernatur corporis numquam iste quibusdam cupiditate. Iure, eum autem?</p>
+        <p x-show="estOuvert" x-transition.duration.500ms >Eligendi, veritatis! Atque ex praesentium, dolores obcaecati minima reprehenderit soluta sequi odio culpa incidunt libero hic ea harum, fugit nulla esse, aspernatur corporis numquam iste quibusdam cupiditate. Iure, eum autem?</p>
       </section>
       <section x-data="{estOuvert:false,
       }">
-        <button @click="estOuvert= !estOuvert" x-transition.duration.5ms>bouton 3
+        <button @click="estOuvert= !estOuvert"
+        x-bind:class="{actif: estOuvert===true}">bouton 3
         </button>
-        <p x-show="estOuvert">At maxime harum laboriosam tempora, alias debitis, cupiditate veritatis non fugiat perspiciatis, voluptatum dolorem rem sequi consectetur porro. Soluta provident nobis ducimus minima, numquam dolorem asperiores cupiditate! Maxime, debitis corporis!</p>
+        <p x-show="estOuvert" x-transition.duration.500ms>At maxime harum laboriosam tempora, alias debitis, cupiditate veritatis non fugiat perspiciatis, voluptatum dolorem rem sequi consectetur porro. Soluta provident nobis ducimus minima, numquam dolorem asperiores cupiditate! Maxime, debitis corporis!</p>
       </section>
     </div>
   </body>
