@@ -8,15 +8,15 @@
     <title>Onglets</title>
     <style>
       #onglets > div {
-        position: relative;
+        position: absolute;
         height: 350px; /* Adjust as needed */
         width: 350px; /* Adjust as needed */
       }
-      #tabpanel ; {
-        position: absolute;
+      [role=tabpanel]  {
+        position: relative;
         opacity: 0;
       }
-      #ouvert {
+      .actif {
         opacity: 1;
       }
     </style>
@@ -27,9 +27,9 @@
       ouvert : 1,
      }">
     <ul role="tablist">
-      <li role="tabpanel">Onglet 1</li>
-      <li role="tabpanel">Onglet 2</li>
-      <li role="tabpanel">Onglet 3</li>
+      <li role="tab">Onglet 1</li>
+      <li role="tab">Onglet 2</li>
+      <li role="tab">Onglet 3</li>
     </ul>
     <div>
       <div role="tabpanel" x-bind:class="{actif: ouvert === 1}">
