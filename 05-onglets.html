@@ -8,16 +8,17 @@
     <title>Onglets</title>
     <style>
       #onglets > div {
-        position: absolute;
+        position: relative;
         height: 350px; /* Adjust as needed */
         width: 350px; /* Adjust as needed */
       }
       [role=tabpanel]  {
-        position: relative;
+        position: absolute;
         opacity: 0;
       }
       .actif {
         opacity: 1;
+        transition: 2s;
       }
       li[role=tab] {
         display: inline-block;
