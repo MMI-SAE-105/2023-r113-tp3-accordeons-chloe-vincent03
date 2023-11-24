@@ -19,6 +19,17 @@
       .actif {
         opacity: 1;
       }
+      li[role=tab] {
+        display: inline-block;
+        padding: 10px;
+        background-color: #5AC0A9; 
+        border: 1px solid #ccc; /* Add a border */
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        text-decoration: none; /* Remove underline */
+        color: white; /* Change to your preferred color */
+}
     </style>
   </head>
   <body>
@@ -28,8 +39,8 @@
      }">
     <ul role="tablist">
       <li role="tab" @click="ouvert=1">Onglet 1</li>
-      <li role="tab" @click="ouvert=1">Onglet 2</li>
-      <li role="tab" @click="ouvert=1">Onglet 3</li>
+      <li role="tab" @click="ouvert=2">Onglet 2</li>
+      <li role="tab" @click="ouvert=3">Onglet 3</li>
     </ul>
     <div>
       <div role="tabpanel" x-bind:class="{actif: ouvert === 1}">
